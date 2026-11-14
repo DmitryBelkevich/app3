@@ -36,7 +36,7 @@ export default class ListPanel {
     return this.#components;
   }
 
-  getSongs() {
+  get songs() {
     return this.#components.filter(component => component instanceof SongComponent);
   }
 }
