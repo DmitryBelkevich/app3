@@ -1,10 +1,15 @@
+import CssLoader from '../../loaders/CssLoader.js';
+
 import Button from '../components/Button.js';
 
 export default class TabsPanel {
+  #cssLoader = new CssLoader();
   #element;
   #components = new Map();// tabs
   
   constructor() {
+    this.#cssLoader.load("./app/views/song/css/tabs.css");
+    
     // container
     this.#element = document.createElement("div");
     this.#element.id = "tabs";
