@@ -1,9 +1,13 @@
 import View from '../View.js';
 
+import NavigatorPanel from './panels/NavigatorPanel.js';
+import ListPanel from './panels/ListPanel.js';
+
 import GenreComponent from './components/GenreComponent.js';
 import SongComponent from './components/SongComponent.js';
 
 export default class ListView extends View {
+  #panels = new Map();
   #components = [];
   
   constructor(genres) {
