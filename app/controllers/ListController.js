@@ -29,7 +29,7 @@ export default class ListController extends Controller {
 
     // binds
     // view.panels.get("list").filter(component => component instanceof SongComponent).forEach(component => component.click(this.#open_song_controller));
-    console.log(view.panels.get("list").getSongs());
+    console.log(view.panels.get("list").songs);
   }
 
   #open_song_controller = (id) => {
