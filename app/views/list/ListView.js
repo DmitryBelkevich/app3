@@ -19,7 +19,7 @@ export default class ListView extends View {
   }
 
   init() {
-    for (const panel of this.#panels)
+    for (const panel of this.#panels.values())
       panel.init();
   }
 
