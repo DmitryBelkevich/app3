@@ -26,8 +26,8 @@ export default class ListPanel {
   }
 
   init() {
-    for (const component of this.#components)
-      component.init();
+    for (const component of this.#components.values())
+      this.#element.append(component.element);
 
     document.body.append(this.#element);
   }
