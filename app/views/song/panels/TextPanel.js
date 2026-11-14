@@ -13,7 +13,10 @@ export default class TextPanel {
     // components
     for (let i = 0; i < 100; i++) {
       const div = document.createElement("div");
-      div.textContent = i + " text content";
+      const spaces = (i) => {
+        return " ";
+      };
+      div.textContent = i + spaces + "text content";
       this.#element.append(div);
     }
   }
