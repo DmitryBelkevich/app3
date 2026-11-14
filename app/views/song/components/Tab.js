@@ -1,7 +1,7 @@
 export default class Tab {
   #element;
   
-  constructor() {
+  constructor(content) {
     this.#element = document.createElement("button");
     this.#element.textContent = content;
   }
