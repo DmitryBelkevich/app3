@@ -14,10 +14,6 @@ export default class SongView extends View {
   constructor(song) {
     super();
     
-    this._cssLoader.load("./app/views/song/css/nav.css");
-    this._cssLoader.load("./app/views/song/css/title.css");
-    this._cssLoader.load("./app/views/song/css/tabs.css");
-
     this.setPageTitle(song.band + " - " + song.title);
 
     this.#panels.set("navigator", new NavigatorPanel());

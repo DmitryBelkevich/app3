@@ -12,6 +12,6 @@ export default class GenreComponent {
   }
 
   init() {
-    document.body.append(this.#element);
+    
   }
 }

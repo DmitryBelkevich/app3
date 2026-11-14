@@ -36,7 +36,7 @@ export default class SongComponent {
   }
 
   init() {
-    document.body.append(this.#element);
+    
   }
 
   click(handler) {

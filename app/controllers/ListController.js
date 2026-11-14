@@ -6,7 +6,6 @@ import SongService from '../services/SongService.js';
 import GenreService from '../services/GenreService.js';
 
 import ListView from '../views/list/ListView.js';
-import SongComponent from '../views/list/components/SongComponent.js';
 
 export default class ListController extends Controller {
   #songService;
@@ -29,7 +28,7 @@ export default class ListController extends Controller {
     view.init();
 
     // binds
-    view.components.filter(component => component instanceof SongComponent).forEach(component => component.click(this.#open_song_controller));
+    view.panels.get("list").songs.forEach(component => component.click(this.#open_song_controller));
   }
 
   #open_song_controller = (id) => {

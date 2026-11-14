@@ -1,33 +1,26 @@
 import View from '../View.js';
 
-import GenreComponent from './components/GenreComponent.js';
-import SongComponent from './components/SongComponent.js';
+import NavigatorPanel from './panels/NavigatorPanel.js';
+import ListPanel from './panels/ListPanel.js';
 
 export default class ListView extends View {
-  #components = [];
+  #panels = new Map();
   
   constructor(genres) {
     super();
 
-    this._cssLoader.load("./app/views/list/css/genre.css");
-    this._cssLoader.load("./app/views/list/css/song.css");
-
     this.setPageTitle("Track-list");
 
-    for (const genre of genres) {
-      this.#components.push(new GenreComponent(genre));
-
-      for (const song of genre.songs)
-        this.#components.push(new SongComponent(song));
-    }
+    this.#panels.set("navigator", new NavigatorPanel());
+    this.#panels.set("list", new ListPanel(genres));
   }
 
   init() {
-    for (const component of this.#components)
-      component.init();
+    for (const panel of this.#panels.values())
+      panel.init();
   }
 
-  get components() {
-    return this.#components;
+  get panels() {
+    return this.#panels;
   }
 }
