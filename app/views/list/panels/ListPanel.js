@@ -35,4 +35,8 @@ export default class ListPanel {
   get components() {
     return this.#components;
   }
+
+  getSongs() {
+    return this.#components.filter(component => component instanceof SongComponent);
+  }
 }
