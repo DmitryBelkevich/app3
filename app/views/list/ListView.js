@@ -18,6 +18,9 @@ export default class ListView extends View {
 
     this.setPageTitle("Track-list");
 
+    this.#panels.set("navigator", new NavigatorPanel());
+    this.#panels.set("list", new ListPanel(genres));
+
     for (const genre of genres) {
       this.#components.push(new GenreComponent(genre));
 
