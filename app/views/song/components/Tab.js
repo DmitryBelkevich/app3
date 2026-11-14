@@ -6,6 +6,10 @@ export default class Tab {
     this.#element.textContent = content;
   }
 
+  get element() {
+    return this.#element;
+  }
+
   init() {
     
   }
