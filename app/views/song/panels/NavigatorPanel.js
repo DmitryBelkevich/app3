@@ -1,10 +1,15 @@
+import CssLoader from '../../loaders/CssLoader.js';
+
 import Button from '../components/Button.js';
 
 export default class NavigatorPanel {
+  #cssLoader = new CssLoader();
   #element;
   #components = new Map();
   
   constructor() {
+    this.#cssLoader.load("./app/views/song/css/nav.css");
+    
     // container
     this.#element = document.createElement("nav");
     this.#element.classList.add("panel");
