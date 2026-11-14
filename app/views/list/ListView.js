@@ -9,9 +9,6 @@ export default class ListView extends View {
   constructor(genres) {
     super();
 
-    this._cssLoader.load("./app/views/list/css/genre.css");
-    this._cssLoader.load("./app/views/list/css/song.css");
-
     this.setPageTitle("Track-list");
 
     this.#panels.set("navigator", new NavigatorPanel());
