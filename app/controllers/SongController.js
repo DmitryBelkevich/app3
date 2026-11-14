@@ -46,5 +46,6 @@ export default class SongController extends Controller {
 
   open_tab = (id) => {
     // TODO
+    console.log("tab " + id);
   }
 }
