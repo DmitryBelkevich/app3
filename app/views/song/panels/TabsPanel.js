@@ -1,6 +1,6 @@
 import CssLoader from '../../loaders/CssLoader.js';
 
-import Button from '../components/Button.js';
+import Tab from '../components/Tab.js';
 
 export default class TabsPanel {
   #cssLoader = new CssLoader();
@@ -15,9 +15,9 @@ export default class TabsPanel {
     this.#element.id = "tabs";
     this.#element.classList.add("panel");
 
-    this.#components.set("tab_text", new Button("📝 Text & Chords").id("tab_text").addClass("tab"));
-    this.#components.set("tab_score", new Button("🎵 Scores").id("tab_score").addClass("tab"));
-    this.#components.set("tab_playback", new Button("🎧 Playbacks").id("tab_playback").addClass("tab"));
+    this.#components.set("tab_text", new Tab("📝 Text & Chords").id("tab_text").addClass("tab"));
+    this.#components.set("tab_score", new Tab("🎵 Scores").id("tab_score").addClass("tab"));
+    this.#components.set("tab_playback", new Tab("🎧 Playbacks").id("tab_playback").addClass("tab"));
   }
 
   init() {
