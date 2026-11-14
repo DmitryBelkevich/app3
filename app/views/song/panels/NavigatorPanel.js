@@ -18,14 +18,14 @@ export default class NavigatorPanel {
     this.#components.set("autoscroll_button", new Button("⏬").id("autoscroll"));
   }
 
+  get components() {
+    return this.#components;
+  }
+
   init() {
     for (const component of this.#components.values())
       this.#element.append(component.element);
     
     document.body.append(this.#element);
-  }
-
-  get components() {
-    return this.#components;
   }
 }
