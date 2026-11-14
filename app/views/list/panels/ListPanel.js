@@ -5,12 +5,18 @@ import SongComponent from '../components/SongComponent.js';
 
 export default class ListPanel {
   #cssLoader = new CssLoader();
+  #element;
   #components = [];
   
   constructor(genres) {
     this.#cssLoader.load("./app/views/list/css/genre.css");
     this.#cssLoader.load("./app/views/list/css/song.css");
-    
+
+    // container
+    this.#element = document.createElement("div");
+    this.#element.classList.add("panel");
+
+    // components
     for (const genre of genres) {
       this.#components.push(new GenreComponent(genre));
 
@@ -22,6 +28,8 @@ export default class ListPanel {
   init() {
     for (const component of this.#components)
       component.init();
+
+    document.body.append(this.#element);
   }
 
   get components() {
