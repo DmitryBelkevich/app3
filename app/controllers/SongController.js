@@ -41,4 +41,6 @@ export default class SongController extends Controller {
     // this.#view.autoscroll.speed = 10;
     this.#view.autoscroll.run();
   }
+
+  // *** tabs ***
 }
