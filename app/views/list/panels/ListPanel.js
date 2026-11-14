@@ -1,5 +1,5 @@
 export default class ListPanel {
-  constructor() {
+  constructor(genres) {
     
   }
 
