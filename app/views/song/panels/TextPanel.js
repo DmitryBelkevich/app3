@@ -1,4 +1,7 @@
+import CssLoader from '../../loaders/CssLoader.js';
+
 export default class TextPanel {
+  #cssLoader = new CssLoader();
   #element;
   
   constructor() {
