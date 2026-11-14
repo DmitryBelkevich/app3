@@ -1,7 +1,11 @@
 export default class TitlePanel {
+  #cssLoader = new CssLoader();
+  
   #element;
   
   constructor(song) {
+    this._cssLoader.load("./app/views/song/css/title.css");
+    
     // container
     this.#element = document.createElement("div");
     this.#element.id = "title";
